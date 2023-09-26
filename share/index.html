@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>share</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/share.html">share</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
+   
+     <script src="https://static.line-scdn.net/liff/egge/versions/2.5.0/sdk.js"></script>
+     <script>
+       async function main() {
+       await liff.init({ liffId: "2000874237-70KB5vz9" })
+       await liff.shareTargetPicker([
+         {
+           type: "flex",
+           altText: "demo share",
+           contents"type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "hello"
+        },
+        {
+          "type": "text",
+          "text": "world"
+        }
+       ])
+       liff.closeWindow()
+        }
+    main()
+    </script>
   </body>
 </html>
